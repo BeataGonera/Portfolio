@@ -6,3 +6,16 @@ body{
     width: 100vw;
     min-height:100vh; 
 }
+
+.active{
+    color: #FFD540;    
+}
+
+.active:hover{
+    color:#FFD540;
+}
+
+.non-active:hover{
+    color:#FFD540;
+
+}
