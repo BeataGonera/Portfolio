@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { LanguageContext } from "../LanguageProvider";
+
 export const Skills = () => {
+
+    const {polish} = useContext(LanguageContext)
 
     const skills = [
         {skill: 'HTML', level: '85%'},
@@ -21,10 +26,16 @@ export const Skills = () => {
         'UX Design'
     ]
 
-    const languages = [
+    const languagesEng = [
         {language: 'Polish', level: '100%'}, 
         {language: 'English', level: '98%'}, 
         {language: 'Italian', level: '55%'}
+    ]
+
+    const languagesPl = [
+        {language: 'Polski', level: '100%'}, 
+        {language: 'Angielski', level: '98%'}, 
+        {language: 'Włoski', level: '55%'}
     ]
 
     const googleCourses = [
@@ -35,10 +46,16 @@ export const Skills = () => {
         'Create high-fidelity designs and prototypes in Figma'
     ]
 
-    const interests = [
+    const interestsEng = [
         'UX and UI', 
         'Accessibility',
         'Boardgames'
+    ]
+
+    const interestsPl = [
+        'UX i UI', 
+        'Dostępność',
+        'Gry planszowe'
     ]
 
     return (
@@ -46,7 +63,9 @@ export const Skills = () => {
         <div className="h-96 w-full">
 
             {/* Skills */}
-            <h2 className="text-white text-lg">Skills</h2>
+            {!polish && <h2 className="text-white text-lg">Skills</h2>}
+            {polish && <h2 className="text-white text-lg">Umiejętności</h2>}
+
             <div className="bg-grey w-full h-[0.07rem] mb-6"></div>
           
                 {skills.map((skill, number)=> (
@@ -62,7 +81,9 @@ export const Skills = () => {
                 ))}
 
             {/* Other skills */}
-            <h2 className="text-white text-lg mt-12">Other skills</h2>
+            {!polish && <h2 className="text-white text-lg mt-12">Other skills</h2>}
+            {polish && <h2 className="text-white text-lg mt-12">Inne umiejętności</h2>}
+
             <div className="bg-grey w-full h-[0.07rem] mb-6"></div>
 
                 <ul className='list-disc px-4'>
@@ -72,10 +93,24 @@ export const Skills = () => {
                 </ul>
 
             {/* Languages */}
-            <h2 className="text-white text-lg mt-12">Languages</h2>
+            {!polish && <h2 className="text-white text-lg mt-12">Languages</h2>}
+            {polish && <h2 className="text-white text-lg mt-12">Języki obce</h2>}
+
             <div className="bg-grey w-full h-[0.07rem] mb-6"></div>
           
-                {languages.map((language, number)=> (
+                {!polish && languagesEng.map((language, number)=> (
+                    <div key={number}>
+                        <p className="text-white font-light mt-2">{language.language}</p>
+                        <div className="flex w-full justify-between items-center h-6">
+                            <div className="w-5/6 bg-light-yellow h-1">
+                                <div className="bg-yellow-orange h-1" style={{width:`${language.level}`}}></div>
+                            </div>
+                            <div className="text-white font-light">{language.level}</div>
+                        </div>
+                    </div>
+                ))}
+
+                {polish && languagesPl.map((language, number)=> (
                     <div key={number}>
                         <p className="text-white font-light mt-2">{language.language}</p>
                         <div className="flex w-full justify-between items-center h-6">
@@ -89,11 +124,15 @@ export const Skills = () => {
 
             {/* Courses */}
 
-            <h2 className="text-white text-lg mt-12">Courses</h2>
+            {!polish && <h2 className="text-white text-lg mt-12">Courses</h2>}
+            {polish && <h2 className="text-white text-lg mt-12">Kursy</h2>}
+
             <div className="bg-grey w-full h-[0.07rem] mb-6"></div>
             
             <p className="text-white text-md font-light">Google UX Design Professional Certificate</p>
-            <p className="text-white text-md font-light mb-4 text-grey">5 Coursera courses - around 5 weeks each</p>
+            {!polish && <p className="text-white text-md font-light mb-4 text-grey">5 Coursera courses - around 5 weeks each</p>}
+            {polish && <p className="text-white text-md font-light mb-4 text-grey">5 Coursera courses - kazdy trwajacy ok. 5 tygodni</p>}
+
 
                 <ul className='list-disc px-4'>
                 {googleCourses.map((course, number) => (
@@ -103,11 +142,17 @@ export const Skills = () => {
 
             {/* Interests */}
 
-            <h2 className="text-white text-lg mt-12">Interests</h2>
+            {!polish && <h2 className="text-white text-lg mt-12">Interests</h2>}
+            {polish && <h2 className="text-white text-lg mt-12">Zainteresowania</h2>}
+
             <div className="bg-grey w-full h-[0.07rem] mb-6"></div>
 
                 <ul className='list-disc px-4'>
-                {interests.map((interest, number) => (
+                {!polish && interestsEng.map((interest, number) => (
+                    <li  key={number} className="text-white font-light mb-2">{interest}</li>
+                ))}
+
+                {polish && interestsEng.map((interest, number) => (
                     <li  key={number} className="text-white font-light mb-2">{interest}</li>
                 ))}
                 </ul>

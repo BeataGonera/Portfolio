@@ -5,6 +5,7 @@ import { CertificatesPage } from './components/CertificatesPage/CertificatesPage
 import { ContactPage } from './components/ContactPage';
 
 function App() {
+
   return (
     <div>
       <Routes>
@@ -12,7 +13,6 @@ function App() {
         <Route path='/certificates' element={<CertificatesPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
-
     </div>
   );
 }

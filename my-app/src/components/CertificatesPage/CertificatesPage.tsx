@@ -1,11 +1,17 @@
 import { NavBar } from "../LandingPage/NavBar";
 
+
 export const CertificatesPage = () => {
+      
+
     return ( 
-        <div>
+        <div className="flex">
             Certificates
-            <NavBar/>
+            <div className="fixed right-0"><NavBar/></div>
         </div>
      );
 }
+
+
+
  
