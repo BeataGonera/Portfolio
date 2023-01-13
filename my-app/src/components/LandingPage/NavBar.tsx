@@ -7,9 +7,14 @@ export const NavBar = () => {
     
 
     return ( 
-        <div className="h-full w-full bg-silver flex flex-col items-center text-white text-sm">
+        <div className="h-screen w-full bg-silver flex flex-col items-center text-white text-sm p-2">
 
-            <nav className="h-[15rem] flex flex-col justify-between mt-36">
+            <button type='button' className="flex justify-center mt-10 w-full p-4">
+                <p className="hover:text-yellow-orange mr-2">PL</p>
+                <img className='object-fill' src='PolishFlag.png' width='30px' height='50px'/>
+            </button>
+
+            <nav className="h-[15rem] flex flex-col justify-evenly mt-28">
                 <NavLink 
                     className= {({ isActive }) => (isActive ? "active" : 'non-active')} 
                     to="/" end

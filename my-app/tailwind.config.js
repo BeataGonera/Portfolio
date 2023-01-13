@@ -8,7 +8,9 @@ module.exports = {
     'black': '#0C0C0C',
     'silver': '#282828', 
     'yellow-orange': '#FFD540', 
-    'white': '#FFFFFF'
+    'white': '#FFFFFF',
+    'grey': '#9B9B9B', 
+    'light-yellow': '#FFF8DF'
   },
 
   fontFamily:{
@@ -17,7 +19,7 @@ module.exports = {
 
     extend: {
       gridTemplateColumns: {
-        '3': '3fr 12fr 1fr',
+        '3': '4fr 12fr 1fr',
 
         // Complex site-specific column configuration
         // 'footer': '200px minmax(900px, 1fr) 100px',
