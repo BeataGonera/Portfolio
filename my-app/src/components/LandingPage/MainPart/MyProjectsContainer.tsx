@@ -7,13 +7,13 @@ export const MyProjectsContainer = () => {
     const {polish} = useContext(LanguageContext);
 
     return ( 
-        <div className='projects-container w-full'>
+        <div className='projects-container px-4 md:px-0 w-full mb-20'>
             {!polish && 
-            <div className="w-4/6 h-48 flex justify-center items-center"><h3 className='text-white text-2xl'>My projects</h3></div>
+            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-[1rem] md:text-2xl'>My projects</h3></div>
             }
 
             {polish && 
-            <div className="w-4/6 h-48 flex justify-center items-center"><h3 className='text-white text-2xl'>Moje projekty</h3></div>
+            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-2xl'>Moje projekty</h3></div>
             }
 
             <ProjectCard 

@@ -2,31 +2,16 @@ import { NavLink } from "react-router-dom";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../LanguageProvider";
 
-export const NavBar = () => {
-    
+export const NavBarMobile = () => {
+
     const {polish, setPolish} = useContext(LanguageContext)
 
+
     return ( 
-        <div className="h-screen w-[8rem] bg-silver flex flex-col items-center text-white text-sm p-2">
-
-        {!polish &&   
-            <button type='button' className="flex flex-col items-center mt-10 w-full p-4" onClick={() => setPolish(true)}>
-                <img className='object-fill mb-1' src='PolishFlag.png' width='30px' height='50px'/>
-                <p className="hover:text-yellow-orange text-sm">PL</p>
-            </button>
-        }
-
-        {polish && 
-            <button type='button' className="flex flex-col items-center mt-10 w-full p-4" onClick={() => setPolish(false)}>
-                <img className='object-fill mb-1' src='ENG.png' width='30px' height='50px'/>
-                <p className="hover:text-yellow-orange text-sm">ENG</p>
-            </button>    
-        }    
-
-            <nav className="h-[15rem] flex flex-col justify-evenly mt-28">
+        <div className="md:hidded w-screen h-[4rem] bg-black flex text-white justify-evenly items-center text-[12px]">
                 <NavLink 
                     className= {({ isActive }) => (isActive ? "active" : 'non-active')} 
                     to="/" end
@@ -51,8 +36,6 @@ export const NavBar = () => {
                         {polish && 
                             <p>Certyfikaty</p>
                         }
-
-                        
                         </div>
                 </NavLink>
 
@@ -70,11 +53,8 @@ export const NavBar = () => {
                         {polish && 
                             <p>Kontakt</p>
                         }
-
                         </div>
                 </NavLink>
-            </nav>
-
         </div>
      );
 }

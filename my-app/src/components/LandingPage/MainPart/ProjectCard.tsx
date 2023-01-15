@@ -20,18 +20,18 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
 
 
     return ( 
-        <div className="project-card w-full h-76 mb-8 bg-silver text-white relative">
-            <figure className='flex justify-between p-6'>
+        <div className="project-card w-full min-h-32 mb-2 md:mb-8 bg-silver text-white relative">
+            <figure className='flex justify-between items-center p-4 md:p-6'>
                 <div className='w-full'>
-                    <figcaption className='text-center text-2xl mb-8'>{projectName}</figcaption>
+                    <figcaption className='md:text-center text-[1rem] md:text-2xl mb-2 md:mb-8'>{projectName}</figcaption>
                     <div className='project-details mr-2'>
-                        {!polish && <p className='mb-4'>{projectDescriptionEng}</p>}
-                        {polish && <p className='mb-4'>{projectDescriptionPl}</p>}
+                        {!polish && <p className='mb-4 text-sm md:text-lg font-light md:font-normal'>{projectDescriptionEng}</p>}
+                        {polish && <p className='mb-4 text-sm md:text-lg font-light md:font-normal'>{projectDescriptionPl}</p>}
 
-                        {!polish && <p className='mb-2'>Technologies I used:</p>}
-                        {polish &&<p className='mb-2'>Technologie:</p>}
+                        {!polish && <p className='hidden md:visible mb-2'>Technologies I used:</p>}
+                        {polish &&<p className='hidden md:visible mb-2'>Technologie:</p>}
 
-                        <ul>
+                        <ul className='hidden md:visible'>
                             {technologies.map((technology, number)=> (
                                 <li key={number}>{technology}</li>
                                 ))
@@ -41,7 +41,7 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
 
 
                         {!polish && 
-                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light mr-2'>
+                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light mr-2 hidden md:visible'>
                             <a href={previewLink} className="mr-[4rem]">Screen recording</a>
                             <a href={appLink} className="mr-[4rem]">Application</a>
                             <a href={figmaLink} className="mr-[4rem]">Prototype</a>
@@ -49,16 +49,21 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                         }
 
                         {polish && 
-                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light '>
+                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light hidden md:visible'>
                             <a href={previewLink} className="mr-[4rem]">Nagranie ekranu</a>
                             <a href={appLink} className="mr-[4rem]">Aplikacja</a>
                             <a href={figmaLink} className="mr-[4rem]">Prototyp</a>
                         </div>
                         }
 
+                        {!polish && 
+                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light'>Show details</button>
+                        
+                        }
+
                     </div>
                 </div>
-                <img src={projectImage} alt="" width="550" height="700"/>
+                <img src={projectImage} alt="" className='w-24 h-24 md:w-96'/>
             </figure>
           
         </div>
