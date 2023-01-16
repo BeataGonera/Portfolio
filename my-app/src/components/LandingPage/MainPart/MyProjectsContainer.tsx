@@ -10,7 +10,7 @@ export const MyProjectsContainer = () => {
     return ( 
         <div className='projects-container px-4 md:px-0 w-full mb-20'>
             {!polish && 
-            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-[1rem] md:text-2xl'>My projects</h3></div>
+            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-end mb-8"><h3 className='text-white text-[1rem] md:text-2xl'>My projects</h3></div>
             }
 
             {polish && 
@@ -26,6 +26,7 @@ export const MyProjectsContainer = () => {
                 previewLink="https://firebasestorage.googleapis.com/v0/b/portfolio-ec6b9.appspot.com/o/BSlight.webm?alt=media&token=112b2cef-a0ee-4dda-9b5b-cf330f7eaba3"
                 appLink="https://bookshare-react.netlify.app/"
                 figmaLink="https://www.figma.com/proto/HiDWWAOSVMWauUqFiFgX45/Bookshare?page-id=0%3A1&node-id=1%3A2&starting-point-node-id=1%3A2"
+                repoLink='https://github.com/rajmanski/BookShare'
                 />
 
             <ProjectCard 
@@ -37,6 +38,7 @@ export const MyProjectsContainer = () => {
                 previewLink=''
                 appLink=""
                 figmaLink="https://www.figma.com/proto/pXOogdaP33VvnswHI0uKit/SweetShop?page-id=0%3A1&node-id=14%3A121191"
+                repoLink='https://github.com/BeataGonera/Sweetshop---Bootstrap-and-Sass'
                 />
 
             <ProjectCard 
@@ -47,6 +49,7 @@ export const MyProjectsContainer = () => {
                 technologies={['React.js', 'Typescript', 'Firebase Database and Autehntication']}
                 previewLink=''
                 appLink="https://hsnotes.netlify.app/#/login"
+                repoLink='https://github.com/infoshareacademy/jfddr7-team-react-ninjas'
                 />
 
             <ProjectCard 
@@ -55,6 +58,7 @@ export const MyProjectsContainer = () => {
                 projectDescriptionEng="Responsive layout of perfume line created during bootcamp." 
                 projectDescriptionPl="Responsywny layout stworzony w czasie kursu."
                 technologies={['HTML 5', 'CSS']}
+                repoLink='https://github.com/BeataGonera/CSS_responsive_layout'
                />
 
             <BackToTopButton/>

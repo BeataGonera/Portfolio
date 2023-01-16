@@ -1,9 +1,12 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
+  content: ["./src/**/*.{js,jsx,ts,tsx,html}", './node_modules/tw-elements/dist/js/**/*.js'],
+  plugins: [
+    require('tw-elements/dist/plugin')
+],
 
+  theme: {
   colors: {
     'black': '#0C0C0C',
     'silver': '#282828', 
@@ -13,10 +16,6 @@ module.exports = {
     'light-yellow': '#FFF8DF'
   },
 
-  fontFamily:{
-    'sans': ['Josefin Sans', 'sans-serif']
-  }, 
-
     extend: {
       gridTemplateColumns: {
         '3': '4fr 12fr 1fr',
@@ -24,7 +23,10 @@ module.exports = {
         // Complex site-specific column configuration
         // 'footer': '200px minmax(900px, 1fr) 100px',
     },
+
+    fontFamily:{
+      'sans': ['Josefin Sans', 'sans-serif']
+    }, 
   },
-  plugins: [],
 }
 }

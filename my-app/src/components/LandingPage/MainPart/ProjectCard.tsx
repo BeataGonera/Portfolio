@@ -12,17 +12,18 @@ interface ProjectCard{
     previewLink?: string;
     appLink?: string;
     figmaLink?: string;
+    repoLink:string;
 }
 
-export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectDescriptionEng, projectDescriptionPl, technologies, previewLink, appLink, figmaLink }) => {
+export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectDescriptionEng, projectDescriptionPl, technologies, previewLink, appLink, figmaLink, repoLink }) => {
 
     const {polish} = useContext(LanguageContext)
 
 
     return ( 
-        <div className="project-card w-full min-h-32 md:h-96 mb-2 md:mb-8 bg-silver text-white relative">
-            <figure className='flex justify-between items-center p-4 md:p-6'>
-                <div className='w-full'>
+        <div className="project-card w-full min-h-32 md:h-96 mb-2 md:mb-4 bg-silver text-white relative">
+            <figure className='flex justify-between items-center p-4 md:p-6 gap-8'>
+                <div className='w-full self-start'>
                     <figcaption className='md:text-center text-[1rem] md:text-2xl mb-2 md:mb-8'>{projectName}</figcaption>
                     <div className='project-details mr-2'>
                         {!polish && <p className='mb-4 text-sm md:text-lg font-light md:font-normal'>{projectDescriptionEng}</p>}
@@ -38,13 +39,19 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                             }    
                             
                         </ul>
+                    </div>
+                </div>
+                <img src={projectImage} alt="" className='w-32 h-full md:w-[40%] md:h-full'/>
+            </figure>
 
-
+            <div className='w-full absolute bottom-4'>
                         {!polish && 
-                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light mr-2 hidden md:block'>
-                            <a href={previewLink} className="mr-[4rem]">Screen recording</a>
-                            <a href={appLink} className="mr-[4rem]">Application</a>
-                            <a href={figmaLink} className="mr-[4rem]">Prototype</a>
+                        <div className='text-yellow-orange font-light hidden md:flex w-full underline justify-start gap-12 mx-8'>
+                            <div><a href={previewLink}>Screen recording</a></div>
+                            <div><a href={appLink}>Application</a></div>
+                            <div><a href={figmaLink}>Prototype</a></div>
+                            <div><a href={repoLink}>GitHub</a></div>
+
                         </div>
                         }
 
@@ -53,18 +60,14 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                             <a href={previewLink} className="mr-[4rem]">Nagranie ekranu</a>
                             <a href={appLink} className="mr-[4rem]">Aplikacja</a>
                             <a href={figmaLink} className="mr-[4rem]">Prototyp</a>
+                            <a href={repoLink} className='mr-[4rem]'>Repo</a>
                         </div>
                         }
 
                         {!polish && 
-                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light'>Show details</button>
-                        
+                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light pl-4 mt-4'>Show details</button>
                         }
-
                     </div>
-                </div>
-                <img src={projectImage} alt="" className='w-32 h-full md:w-96 md:h-full'/>
-            </figure>
           
         </div>
      );

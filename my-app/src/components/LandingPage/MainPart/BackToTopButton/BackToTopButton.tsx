@@ -28,7 +28,7 @@ export const BackToTopButton = () => {
 
     return ( 
         <button 
-            className="rounded-full bg-yellow-orange w-12 h-12 fixed bottom-16 right-32" 
+            className="rounded-full bg-yellow-orange w-12 h-12 fixed bottom-24 right-12 md:bottom-16 md:right-32" 
             onClick={scrollToTop}
             style={{display: visible ? 'inline' : 'none'}}
         >

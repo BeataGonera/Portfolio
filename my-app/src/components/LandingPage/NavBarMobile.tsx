@@ -11,7 +11,7 @@ export const NavBarMobile = () => {
 
 
     return ( 
-        <div className="md:hidded w-screen h-[4rem] bg-silver flex text-white justify-evenly items-center text-[12px]">
+        <div className="md:hidden w-screen h-[4rem] bg-silver flex text-white justify-evenly items-center text-[12px]">
                 <NavLink 
                     className= {({ isActive }) => (isActive ? "active" : 'non-active')} 
                     to="/" end
