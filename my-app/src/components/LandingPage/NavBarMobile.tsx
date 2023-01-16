@@ -11,7 +11,7 @@ export const NavBarMobile = () => {
 
 
     return ( 
-        <div className="md:hidded w-screen h-[4rem] bg-black flex text-white justify-evenly items-center text-[12px]">
+        <div className="md:hidded w-screen h-[4rem] bg-silver flex text-white justify-evenly items-center text-[12px]">
                 <NavLink 
                     className= {({ isActive }) => (isActive ? "active" : 'non-active')} 
                     to="/" end
@@ -41,7 +41,7 @@ export const NavBarMobile = () => {
 
                 <NavLink 
                     className= {({ isActive }) => (isActive ? "active" : 'non-active')} 
-                    to="/contact" end
+                    to="/contact-mobile" end
                     >
                         <div className="flex flex-col items-center">
                         <PhoneEnabledOutlinedIcon className="mb-2"/>

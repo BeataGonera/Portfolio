@@ -1,6 +1,6 @@
-import { NavBar } from "./LandingPage/NavBar";
+import { NavBar } from "../LandingPage/NavBar";
 import { useContext } from "react";
-import { LanguageContext } from "./LanguageProvider";
+import { LanguageContext } from "../LanguageProvider";
 
 export const ContactPage = () => {
 

@@ -1,6 +1,7 @@
 import { ProjectCard } from "./ProjectCard";
 import { useContext } from "react";
 import { LanguageContext } from "../../../components/LanguageProvider"
+import { BackToTopButton } from "./BackToTopButton/BackToTopButton";
 
 export const MyProjectsContainer = () => {
 
@@ -13,7 +14,7 @@ export const MyProjectsContainer = () => {
             }
 
             {polish && 
-            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-2xl'>Moje projekty</h3></div>
+            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-[1rem] md:text-2xl'>Moje projekty</h3></div>
             }
 
             <ProjectCard 
@@ -55,6 +56,8 @@ export const MyProjectsContainer = () => {
                 projectDescriptionPl="Responsywny layout stworzony w czasie kursu."
                 technologies={['HTML 5', 'CSS']}
                />
+
+            <BackToTopButton/>
         </div>
      );
 }

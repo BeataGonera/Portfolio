@@ -11,7 +11,7 @@ export const LandingPage = () => {
     return ( 
     <div>
 
-        <div className='hidden md:flex bg-black w-screen gap-4' >
+        <div className='hidden md:flex bg-black w-screen h-full gap-4' >
             <SkillsContainer/>
             <MainPart/>
             <NavBar/>

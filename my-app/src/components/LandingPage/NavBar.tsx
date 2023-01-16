@@ -10,7 +10,7 @@ export const NavBar = () => {
     const {polish, setPolish} = useContext(LanguageContext)
 
     return ( 
-        <div className="h-screen w-[8rem] bg-silver flex flex-col items-center text-white text-sm p-2">
+        <div className="h-screen w-[6rem] fixed right-0 bg-silver flex flex-col items-center text-white text-sm p-2">
 
         {!polish &&   
             <button type='button' className="flex flex-col items-center mt-10 w-full p-4" onClick={() => setPolish(true)}>
