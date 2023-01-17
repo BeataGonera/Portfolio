@@ -28,8 +28,8 @@ export const PresentationContainer = () => {
     {polish && 
 
          <div className="my-description ml-4 h-full lg:w-3/6 flex flex-col justify-center">
-                <h1 className="text-5xl text-white mb-2">Beata Gonera</h1>
-                <h1 className="text-5xl text-white mb-8 text-right"><span className="text-yellow-orange">Front-end </span>Developer</h1>
+                <h1 className="sm:text-3xl 2xl:text-5xl text-white mb-2">Beata Gonera</h1>
+                <h1 className="sm:text-3xl 2xl:text-5xl text-white mb-8 2xl:text-right"><span className="text-yellow-orange">Front-end </span>Developer</h1>
                 <div className="w-4/5">
                 <p className="text-sm text-white lg:mb-8 leading-6">Moja przygoda ze światem IT zaczęła się od UX Designu. Kiedy poznałam podstawy UX i zaczęłam tworzyć prototypy aplikacji, doszłam do wniosku, że chcę nauczyć się zamieniać je w działające aplikacje.</p>
                 </div>

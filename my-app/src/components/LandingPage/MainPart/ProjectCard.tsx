@@ -46,7 +46,7 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                         }
 
                         {polish && 
-                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light mt-2 h-4'>Rozwiń</button>
+                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light pl-4 mt-2 h-4'>Rozwiń</button>
                         }
                 </div>
                 <img src={projectImage} alt="" className='flex md:hidden lg:flex w-32 h-full md:w-[40%] md:h-full'/>

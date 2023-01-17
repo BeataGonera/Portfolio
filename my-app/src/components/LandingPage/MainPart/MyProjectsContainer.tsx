@@ -10,7 +10,7 @@ export const MyProjectsContainer = () => {
     return ( 
         <div className='projects-container px-4 md:px-0 w-full mb-20'>
             {!polish && 
-            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-end mb-8"><h3 className='text-white text-[1rem] md:text-2xl'>My projects</h3></div>
+            <div className="w-4/6 h-12 md:h-48 flex md:justify-center items-center"><h3 className='text-white text-[1rem] md:text-2xl'>My projects</h3></div>
             }
 
             {polish && 
@@ -44,7 +44,7 @@ export const MyProjectsContainer = () => {
                 projectName="Cakee" 
                 projectImage="Cakee.png" 
                 projectDescriptionEng="Landing page of a sweetshop. Based on Bootstrap components customised with Sass." 
-                projectDescriptionPl="Strona startowa cukierni, stworzona z użyciem biblioteki Bootstrap. Stylizowana za pomocą preprocesora Sass."
+                projectDescriptionPl="Strona startowa cukierni, stworzona z użyciem biblioteki Bootstrap. Stylizowana za pomocą preprocesoSass."
                 technologies={['React.js', 'Typescript', 'Bootstrap', 'Sass', 'Firebase Database and Authentication']}
                 previewLink=''
                 appLink=""
