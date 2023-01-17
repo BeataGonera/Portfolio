@@ -1,11 +1,22 @@
 import { useContext } from "react";
 import { LanguageContext } from "../LanguageProvider";
 
+interface skill{
+    skill: string;
+    level: string;
+}
+
+interface language{
+    language: string;
+    level: string;
+}
+
+
 export const Skills = () => {
 
     const {polish} = useContext(LanguageContext)
 
-    const skills = [
+    const skills:skill[] = [
         {skill: 'HTML', level: '85%'},
         {skill: 'CSS', level: '85%'}, 
         {skill: 'JavaScript', level: '85%'}, 
@@ -13,7 +24,7 @@ export const Skills = () => {
         {skill: 'Typescript', level: '75%'}
     ]
 
-    const otherSkills = [
+    const otherSkills:string[] = [
         'Tailwind',
         'Bootstrap 5',
         'Material UI',
@@ -26,13 +37,13 @@ export const Skills = () => {
         'UX Design'
     ]
 
-    const languagesEng = [
+    const languagesEng:language[] = [
         {language: 'Polish', level: '100%'}, 
         {language: 'English', level: '98%'}, 
         {language: 'Italian', level: '55%'}
     ]
 
-    const languagesPl = [
+    const languagesPl:language[] = [
         {language: 'Polski', level: '100%'}, 
         {language: 'Angielski', level: '98%'}, 
         {language: 'Włoski', level: '55%'}
@@ -48,13 +59,11 @@ export const Skills = () => {
 
     const interestsEng = [
         'UX and UI', 
-        'Accessibility',
         'Boardgames'
     ]
 
     const interestsPl = [
         'UX i UI', 
-        'Dostępność',
         'Gry planszowe'
     ]
 
@@ -152,7 +161,7 @@ export const Skills = () => {
                     <li  key={number} className="text-white font-light mb-2">{interest}</li>
                 ))}
 
-                {polish && interestsEng.map((interest, number) => (
+                {polish && interestsPl.map((interest, number) => (
                     <li  key={number} className="text-white font-light mb-2">{interest}</li>
                 ))}
                 </ul>

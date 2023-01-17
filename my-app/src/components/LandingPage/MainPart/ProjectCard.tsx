@@ -34,7 +34,7 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
 
                         <ul className='hidden md:block'>
                             {technologies.map((technology, number)=> (
-                                <li key={number}>{technology}</li>
+                                <li key={number} className='font-light'>{technology}</li>
                                 ))
                             }    
                             
@@ -68,7 +68,7 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                             <a href={previewLink}>Nagranie ekranu</a>
                             <a href={appLink}>Aplikacja</a>
                             <a href={figmaLink}>Prototyp</a>
-                            <a href={repoLink}>Repo</a>
+                            <a href={repoLink}>Repozytorium</a>
                         </div>
                         }
                     </div>

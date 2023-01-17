@@ -44,7 +44,7 @@ export const MyProjectsContainer = () => {
                 projectName="Cakee" 
                 projectImage="Cakee.png" 
                 projectDescriptionEng="Landing page of a sweetshop. Based on Bootstrap components customised with Sass." 
-                projectDescriptionPl="Strona startowa cukierni, stworzona z użyciem biblioteki Bootstrap. Stylizowana za pomocą preprocesoSass."
+                projectDescriptionPl="Strona startowa cukierni, stworzona z użyciem biblioteki Bootstrap. Stylizowana za pomocą preprocesora Sass."
                 technologies={['React.js', 'Typescript', 'Bootstrap', 'Sass', 'Firebase Database and Authentication']}
                 previewLink=''
                 appLink=""
