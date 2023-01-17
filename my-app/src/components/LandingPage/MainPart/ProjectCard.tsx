@@ -2,6 +2,11 @@ import { FC } from 'react';
 import { useContext } from 'react';
 import { LanguageContext } from '../../../components/LanguageProvider';
 
+interface link{
+    linkNameEng: string;
+    linkNamePl: string;
+    link: string;
+}
 
 interface ProjectCard{
     projectName: string;
@@ -9,13 +14,10 @@ interface ProjectCard{
     projectDescriptionEng: string;
     projectDescriptionPl: string;
     technologies: string[];
-    previewLink?: string;
-    appLink?: string;
-    figmaLink?: string;
-    repoLink:string;
+    links:link[]
 }
 
-export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectDescriptionEng, projectDescriptionPl, technologies, previewLink, appLink, figmaLink, repoLink }) => {
+export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectDescriptionEng, projectDescriptionPl, technologies, links }) => {
 
     const {polish} = useContext(LanguageContext)
 
@@ -54,21 +56,21 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
 
             <div className='w-full'>
                         {!polish && 
-                        <div className='text-yellow-orange font-light hidden md:flex lg:w-full underline justify-between lg:justify-start gap-2 lg:gap-12 mx-1 lg:mx-8 h-12'>
-                            <div><a href={previewLink}>Screen recording</a></div>
-                            <div><a href={appLink}>Application</a></div>
-                            <div><a href={figmaLink}>Prototype</a></div>
-                            <div><a href={repoLink}>GitHub</a></div>
+                        <div className='text-yellow-orange font-light hidden md:flex lg:w-full underline justify-start lg:justify-start gap-2 lg:gap-12 mx-1 lg:mx-8 h-12'>
+                            {links.map((link, number)=> (
+                                <div key={number}><a href={link.link}>{link.linkNameEng}</a></div>
+                            )
+                            )}
 
                         </div>
                         }
 
                         {polish && 
                         <div className='text-yellow-orange font-light hidden md:flex lg:w-full underline justify-between lg:justify-start gap-2 lg:gap-12 mx-1 lg:mx-8 h-12'>
-                            <a href={previewLink}>Nagranie ekranu</a>
-                            <a href={appLink}>Aplikacja</a>
-                            <a href={figmaLink}>Prototyp</a>
-                            <a href={repoLink}>Repozytorium</a>
+                            {links.map((link)=> (
+                                <div><a href={link.link}>{link.linkNamePl}</a></div>
+                            )
+                            )}
                         </div>
                         }
                     </div>
