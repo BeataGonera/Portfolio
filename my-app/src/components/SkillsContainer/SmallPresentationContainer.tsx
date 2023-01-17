@@ -29,7 +29,7 @@ export const SmallPresentationContainer = () => {
                 {!polish && <div className='self-end'>Warsaw, Poland</div>}
                 {polish && <div className='self-end'>Warszawa, Polska</div>}
             </div>
-            <div className="buttons flex w-full justify-between p-6">
+            <div className="buttons flex w-full justify-between p-2 xl:p-4">
                 <button type='button' className="bg-yellow-orange w-10 h-10 rounded-full hover:bg-white"><a href='https://github.com/BeataGonera'><GitHubIcon/></a></button>
                 <button type='button' className="bg-yellow-orange w-10 h-10 rounded-full hover:bg-white"><a href='https://www.linkedin.com/in/beataiwonagonera/'><LinkedInIcon/></a></button>
                 <button 

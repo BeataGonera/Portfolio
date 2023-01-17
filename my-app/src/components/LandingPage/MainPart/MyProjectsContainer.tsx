@@ -30,18 +30,6 @@ export const MyProjectsContainer = () => {
                 />
 
             <ProjectCard 
-                projectName="Cakee" 
-                projectImage="Cakee.png" 
-                projectDescriptionEng="Responsive application for ordering homemade cakes." 
-                projectDescriptionPl="Responsywna aplikacja tworzona dla cukierni."
-                technologies={['React.js', 'Typescript', 'Bootstrap', 'Sass', 'Firebase Database and Authentication']}
-                previewLink=''
-                appLink=""
-                figmaLink="https://www.figma.com/proto/pXOogdaP33VvnswHI0uKit/SweetShop?page-id=0%3A1&node-id=14%3A121191"
-                repoLink='https://github.com/BeataGonera/Sweetshop---Bootstrap-and-Sass'
-                />
-
-            <ProjectCard 
                 projectName="HSNotes" 
                 projectImage="HSNotes.png" 
                 projectDescriptionEng="Partly responsive app created as a final bootcamp project. We worked in SCRUM methodology in a team of 3."
@@ -50,6 +38,18 @@ export const MyProjectsContainer = () => {
                 previewLink=''
                 appLink="https://hsnotes.netlify.app/#/login"
                 repoLink='https://github.com/infoshareacademy/jfddr7-team-react-ninjas'
+                />
+
+            <ProjectCard 
+                projectName="Cakee" 
+                projectImage="Cakee.png" 
+                projectDescriptionEng="Landing page of a sweetshop. Based on Bootstrap components customised with Sass." 
+                projectDescriptionPl="Strona startowa cukierni, stworzona z użyciem biblioteki Bootstrap. Stylizowana za pomocą preprocesora Sass."
+                technologies={['React.js', 'Typescript', 'Bootstrap', 'Sass', 'Firebase Database and Authentication']}
+                previewLink=''
+                appLink=""
+                figmaLink="https://www.figma.com/proto/pXOogdaP33VvnswHI0uKit/SweetShop?page-id=0%3A1&node-id=14%3A121191"
+                repoLink='https://github.com/BeataGonera/Sweetshop---Bootstrap-and-Sass'
                 />
 
             <ProjectCard 

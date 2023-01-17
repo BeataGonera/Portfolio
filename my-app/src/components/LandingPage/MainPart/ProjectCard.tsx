@@ -21,11 +21,11 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
 
 
     return ( 
-        <div className="project-card w-full min-h-32 md:h-96 mb-2 md:mb-4 bg-silver text-white relative">
+        <div className="project-card w-full lg:min-h-32 md:min-h-96 mb-2 md:mb-4 bg-silver text-white relative">
             <figure className='flex justify-between items-center p-4 md:p-6 gap-8'>
                 <div className='w-full self-start'>
                     <figcaption className='md:text-center text-[1rem] md:text-2xl mb-2 md:mb-8'>{projectName}</figcaption>
-                    <div className='project-details mr-2'>
+                    <div className='project-details mr-2 mb-12 lg:mb-0'>
                         {!polish && <p className='mb-4 text-sm md:text-lg font-light md:font-normal'>{projectDescriptionEng}</p>}
                         {polish && <p className='mb-4 text-sm md:text-lg font-light md:font-normal'>{projectDescriptionPl}</p>}
 
@@ -40,13 +40,21 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                             
                         </ul>
                     </div>
+
+                    {!polish && 
+                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light mt-2 h-4'>Show details</button>
+                        }
+
+                        {polish && 
+                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light mt-2 h-4'>Rozwiń</button>
+                        }
                 </div>
-                <img src={projectImage} alt="" className='w-32 h-full md:w-[40%] md:h-full'/>
+                <img src={projectImage} alt="" className='flex md:hidden lg:flex w-32 h-full md:w-[40%] md:h-full'/>
             </figure>
 
-            <div className='w-full absolute bottom-4'>
+            <div className='w-full'>
                         {!polish && 
-                        <div className='text-yellow-orange font-light hidden md:flex w-full underline justify-start gap-12 mx-8'>
+                        <div className='text-yellow-orange font-light hidden md:flex lg:w-full underline justify-between lg:justify-start gap-2 lg:gap-12 mx-1 lg:mx-8 h-12'>
                             <div><a href={previewLink}>Screen recording</a></div>
                             <div><a href={appLink}>Application</a></div>
                             <div><a href={figmaLink}>Prototype</a></div>
@@ -56,16 +64,12 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                         }
 
                         {polish && 
-                        <div className='links text-yellow-orange flex justify-between underline absolute bottom-6 font-light hidden md:block'>
-                            <a href={previewLink} className="mr-[4rem]">Nagranie ekranu</a>
-                            <a href={appLink} className="mr-[4rem]">Aplikacja</a>
-                            <a href={figmaLink} className="mr-[4rem]">Prototyp</a>
-                            <a href={repoLink} className='mr-[4rem]'>Repo</a>
+                        <div className='text-yellow-orange font-light hidden md:flex lg:w-full underline justify-between lg:justify-start gap-2 lg:gap-12 mx-1 lg:mx-8 h-12'>
+                            <a href={previewLink}>Nagranie ekranu</a>
+                            <a href={appLink}>Aplikacja</a>
+                            <a href={figmaLink}>Prototyp</a>
+                            <a href={repoLink}>Repo</a>
                         </div>
-                        }
-
-                        {!polish && 
-                        <button className='md:hidden text-sm text-yellow-orange bg-silver font-light pl-4 mt-4'>Show details</button>
                         }
                     </div>
           
