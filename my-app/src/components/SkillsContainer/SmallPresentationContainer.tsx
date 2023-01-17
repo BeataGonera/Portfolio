@@ -32,15 +32,35 @@ export const SmallPresentationContainer = () => {
             <div className="buttons flex w-full justify-between p-2 xl:p-4">
                 <button type='button' className="bg-yellow-orange w-10 h-10 rounded-full hover:bg-white"><a href='https://github.com/BeataGonera'><GitHubIcon/></a></button>
                 <button type='button' className="bg-yellow-orange w-10 h-10 rounded-full hover:bg-white"><a href='https://www.linkedin.com/in/beataiwonagonera/'><LinkedInIcon/></a></button>
-                <button 
-                    type='button' 
-                    className="bg-yellow-orange w-36 h-10 rounded text-sm hover:bg-white"
-                >
-                    <Link to='/CVPolish.pdf' target='_blank' download>
-                        <FileDownloadOutlinedIcon className='mr-2'/>
-                        Download CV
-                    </Link>  
-                </button>
+
+            {!polish && 
+            
+            <button 
+                type='button' 
+                className="bg-yellow-orange w-36 h-10 rounded text-sm hover:bg-white"
+            >
+                <Link to='/CVEnglish.pdf' target='_blank' download>
+                <FileDownloadOutlinedIcon className='mr-2'/>
+                Download CV
+                </Link>  
+            </button>
+            
+            }
+
+            {polish && 
+            
+            <button 
+                type='button' 
+                className="bg-yellow-orange w-36 h-10 rounded text-sm hover:bg-white"
+            >
+                <Link to='/CVPolish.pdf' target='_blank' download>
+                <FileDownloadOutlinedIcon className='mr-2'/>
+                Pobierz CV
+                </Link>  
+            </button>
+    
+            }
+               
             </div>
         </div>
      );
