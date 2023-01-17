@@ -42,7 +42,8 @@ export const ProjectCard:FC<ProjectCard> = ({projectName, projectImage, projectD
                             
                         </ul>
                     </div>
-
+                    
+                    
                     {!polish && 
                         <button className='md:hidden text-sm text-yellow-orange bg-silver font-light mt-2 h-4'>Show details</button>
                         }
