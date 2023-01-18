@@ -5,7 +5,7 @@ export const CertificatesCarousel = () => {
   <div className="carousel-inner relative w-4/6 overflow-hidden flex">
     <div className="carousel-item active relative float-left w-full">
       <img
-        src="InfoShare.png"
+        src="InfoSharel.webp"
         className="block w-full"
         alt="InfoShare Academy Certificate"
       />
