@@ -12,21 +12,21 @@ export const CertificatesCarousel = () => {
     </div>
     <div className="carousel-item relative float-left w-full">
       <img
-        src="Coursera1.webp"
+        src="Coursera1l.webp"
         className="block w-full"
         alt="Coursera Certificate"
       />
     </div>
     <div className="carousel-item relative float-left w-full">
       <img
-        src="Coursera2.png"
+        src="Coursera2l.webp"
         className="block w-full"
         alt="Coursera Certificates"
       />
     </div>
     <div className="carousel-item relative float-left w-full">
       <img
-        src="Coursera3.png"
+        src="Coursera3l.webp"
         className="block w-full"
         alt="Coursera Certificates"
       />
